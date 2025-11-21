@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí - Wilches</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">Wilches</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html" class="active">Sobre Mí</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header de Página -->
+    <div class="page-header">
+        <h1>Sobre Mí</h1>
+        <p>Conoce mi historia y mi pasión por el diseño</p>
+    </div>
+
+    <!-- Sección Acerca de Mí -->
+    <section class="about-full">
+        <div class="about-image">
+            <img src="imagenes/WhatsApp Image 2025-09-11 at 10.16.38 AM.jpeg" alt="Acerca de mí">
+        </div>
+        <div class="about-content">
+            <h2>Mi Historia</h2>
+            <p>Soy un diseñador apasionado y creativo con un enfoque principal en el diseño gráfico y la creación de contenido visual atractivo. Mi viaje en el mundo del diseño comenzó hace varios años cuando descubrí mi pasión por transformar ideas en realidades visuales.</p>
+            <p>A lo largo de mi carrera, he tenido la oportunidad de trabajar con diversos clientes, desde pequeños emprendedores hasta empresas establecidas, ayudándolos a comunicar su mensaje de manera efectiva a través del diseño.</p>
+        </div>
+    </section>
+
+    <!-- Mis Valores -->
+    <section class="values">
+        <h2>Mis Valores</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <div class="value-icon">💡</div>
+                <h3>Creatividad</h3>
+                <p>Cada proyecto es una oportunidad para innovar y crear algo único</p>
+            </div>
+            <div class="value-item">
+                <div class="value-icon">🎯</div>
+                <h3>Atención al Detalle</h3>
+                <p>Los pequeños detalles hacen la gran diferencia en el resultado final</p>
+            </div>
+            <div class="value-item">
+                <div class="value-icon">🤝</div>
+                <h3>Compromiso</h3>
+                <p>Me dedico al 100% a cada proyecto que emprendo</p>
+            </div>
+            <div class="value-item">
+                <div class="value-icon">⚡</div>
+                <h3>Adaptabilidad</h3>
+                <p>Me adapto a diferentes estilos y necesidades de cada cliente</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="skills">
+        <h2>Mis Habilidades</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <h3>Adobe Photoshop</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Adobe Illustrator</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Adobe Premiere Pro</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>After Effects</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Sígueme en redes sociales:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100009296527209" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/bocadosstreet?igsh=MXdsNWY5ZTRwdXBrZQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Wilches - Diseñador Gráfico</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

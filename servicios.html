@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Wilches</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">Wilches</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li><a href="servicios.html" class="active">Servicios</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header de Página -->
+    <div class="page-header">
+        <h1>Mis Servicios</h1>
+        <p>Soluciones creativas para hacer crecer tu marca</p>
+    </div>
+
+    <!-- Servicios Detallados -->
+    <section class="services-detailed">
+        <div class="service-detail">
+            <div class="service-detail-image">
+                <div class="service-icon">🎨</div>
+            </div>
+            <div class="service-detail-content">
+                <h2>Diseño Gráfico</h2>
+                <p>Diseño profesional de logotipos, tarjetas de presentación, folletos, banners y toda la identidad visual que tu marca necesita. Cada diseño es único y pensado específicamente para comunicar los valores de tu negocio.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Diseño de logotipos</li>
+                    <li><i class="fas fa-check"></i> Tarjetas de presentación</li>
+                    <li><i class="fas fa-check"></i> Folletos y brochures</li>
+                    <li><i class="fas fa-check"></i> Banners y carteles</li>
+                    <li><i class="fas fa-check"></i> Identidad corporativa completa</li>
+                </ul>
+                <p class="price"><strong>Precio desde:</strong> $320,000 COP</p>
+            </div>
+        </div>
+
+        <div class="service-detail reverse">
+            <div class="service-detail-image">
+                <div class="service-icon">📹</div>
+            </div>
+            <div class="service-detail-content">
+                <h2>Contenido Audiovisual</h2>
+                <p>Creación de contenido visual atractivo para redes sociales, sitios web y campañas digitales. Videos promocionales, reels, stories y todo el contenido que necesitas para destacar en el mundo digital.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Videos para redes sociales</li>
+                    <li><i class="fas fa-check"></i> Reels y Stories</li>
+                    <li><i class="fas fa-check"></i> Edición de video profesional</li>
+                    <li><i class="fas fa-check"></i> Motion graphics</li>
+                    <li><i class="fas fa-check"></i> Contenido para TikTok e Instagram</li>
+                </ul>
+                <p class="price"><strong>Precio desde:</strong> $300,000 COP</p>
+            </div>
+        </div>
+
+        <div class="service-detail">
+            <div class="service-detail-image">
+                <div class="service-icon">📢</div>
+            </div>
+            <div class="service-detail-content">
+                <h2>Publicidad y Marketing</h2>
+                <p>Diseño de materiales publicitarios y estrategias visuales que generan impacto. Desde anuncios digitales hasta campañas completas de marketing visual que conectan con tu audiencia.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Diseño de anuncios digitales</li>
+                    <li><i class="fas fa-check"></i> Campañas publicitarias</li>
+                    <li><i class="fas fa-check"></i> Material promocional</li>
+                    <li><i class="fas fa-check"></i> Diseño para redes sociales</li>
+                    <li><i class="fas fa-check"></i> Estrategia visual de marca</li>
+                </ul>
+                <p class="price"><strong>Precio desde:</strong> $300,000 COP</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section class="reviews">
+        <h2>Lo Que Dicen Mis Clientes</h2>
+        <div class="reviews-container">
+            <div class="review-item">
+                <p><strong>Nidia:</strong> "Wilches transformó nuestra empresa en términos de diseño. ¡Excelente servicio y profesionalismo!"</p>
+            </div>
+            <div class="review-item">
+                <p><strong>James:</strong> "Profesional, entregó a tiempo y mejoró nuestra marca."</p>
+            </div>
+            <div class="review-item">
+                <p><strong>Luis Suárez:</strong> "Contenido visual increíble para nuestras redes sociales. Aumentó la interacción."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>¿Interesado en algún servicio?</h2>
+        <p>Conversemos sobre tu proyecto</p>
+        <a href="contacto.html" class="btn-primary">Solicitar Cotización</a>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Sígueme en redes sociales:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100009296527209" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/bocadosstreet?igsh=MXdsNWY5ZTRwdXBrZQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Wilches - Diseñador Gráfico</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

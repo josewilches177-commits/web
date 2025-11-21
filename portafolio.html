@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Wilches</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">Wilches</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="portafolio.html" class="active">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header de Página -->
+    <div class="page-header">
+        <h1>Mi Portafolio</h1>
+        <p>Explora algunos de mis trabajos más recientes</p>
+    </div>
+
+    <!-- Galería de Portafolio -->
+    <section class="portfolio">
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="diseno">Diseño</button>
+            <button class="filter-btn" data-filter="audiovisual">Audiovisual</button>
+            <button class="filter-btn" data-filter="publicidad">Publicidad</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="diseno">
+                <img src="imagenes/WhatsApp Image 2025-09-10 at 11.46.35 PM (3).jpeg" alt="Proyecto 1">
+                <div class="portfolio-overlay">
+                    <h3>Diseño de Identidad</h3>
+                    <p>Branding completo para empresa</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="audiovisual">
+                <img src="imagenes/WhatsApp Image 2025-09-10 at 11.46.35 PM (2).jpeg" alt="Proyecto 2">
+                <div class="portfolio-overlay">
+                    <h3>Contenido Social Media</h3>
+                    <p>Videos promocionales para Instagram</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="publicidad">
+                <img src="imagenes/WhatsApp Image 2025-09-10 at 11.49.05 PM.jpeg" alt="Proyecto 3">
+                <div class="portfolio-overlay">
+                    <h3>Campaña Publicitaria</h3>
+                    <p>Material gráfico para campaña</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="diseno">
+                <img src="imagenes/WhatsApp Image 2025-09-10 at 11.46.35 PM (3).jpeg" alt="Proyecto 4">
+                <div class="portfolio-overlay">
+                    <h3>Logotipo Corporativo</h3>
+                    <p>Diseño de marca moderna</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="audiovisual">
+                <img src="imagenes/WhatsApp Image 2025-09-10 at 11.46.35 PM (2).jpeg" alt="Proyecto 5">
+                <div class="portfolio-overlay">
+                    <h3>Video Corporativo</h3>
+                    <p>Producción audiovisual</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="publicidad">
+                <img src="imagenes/WhatsApp Image 2025-09-10 at 11.49.05 PM.jpeg" alt="Proyecto 6">
+                <div class="portfolio-overlay">
+                    <h3>Anuncios Digitales</h3>
+                    <p>Diseño para redes sociales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Trabajo -->
+    <section class="work-process">
+        <h2>Mi Proceso de Trabajo</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Consulta Inicial</h3>
+                <p>Conversamos sobre tu proyecto y objetivos</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Propuesta</h3>
+                <p>Presento ideas y conceptos iniciales</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Desarrollo</h3>
+                <p>Creo el diseño basado en tu feedback</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Entrega Final</h3>
+                <p>Recibe tu proyecto listo para usar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>¿Te gusta lo que ves?</h2>
+        <p>Trabajemos juntos en tu próximo proyecto</p>
+        <a href="contacto.html" class="btn-primary">Iniciar Proyecto</a>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Sígueme en redes sociales:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100009296527209" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/bocadosstreet?igsh=MXdsNWY5ZTRwdXBrZQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Wilches - Diseñador Gráfico</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Filtros de Portafolio
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remover active de todos los botones
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Agregar active al botón clickeado
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

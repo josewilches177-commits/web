@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Wilches</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">Wilches</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="contact-page">
+        <div class="page-header">
+            <h1>Hablemos de tu Proyecto</h1>
+            <p>Estoy listo para ayudarte a llevar tu marca al siguiente nivel. ¡Contáctame!</p>
+        </div>
+
+        <section class="contact-form-section">
+            <form action="enviar.php" method="POST"> 
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Tu Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Otras Formas de Contacto</h3>
+                <p><i class="fas fa-envelope"></i> josewilches1777@gmail.com</p>
+                <p><i class="fab fa-whatsapp"></i> +57 301 571 9808</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Sígueme en redes sociales:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100009296527209" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/bocadosstreet?igsh=MXdsNWY5ZTRwdXBrZQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Wilches - Diseñador Gráfico</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        // ... dentro de la etiqueta <script> en contacto.html
+
+// NUEVO CÓDIGO PARA MOSTRAR MENSAJES DE ESTADO
+const urlParams = new URLSearchParams(window.location.search);
+const status = urlParams.get('status');
+const contactFormSection = document.querySelector('.contact'); // O donde quieras mostrar el mensaje
+
+if (status) {
+    let message = "";
+    let alertClass = "";
+    
+    if (status === 'success') {
+        message = "✅ ¡Gracias! Tu mensaje ha sido enviado con éxito y me pondré en contacto contigo pronto.";
+        alertClass = "alert-success";
+    } else if (status === 'error') {
+        message = "⚠️ Error: Por favor, asegúrate de llenar todos los campos requeridos correctamente.";
+        alertClass = "alert-error";
+    } else if (status === 'fail') {
+        message = "❌ Error en el envío. Por favor, intenta de nuevo o contáctame por redes sociales.";
+        alertClass = "alert-error";
+    }
+
+    if (message) {
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `status-alert ${alertClass}`;
+        alertDiv.textContent = message;
+        // Insertar el mensaje al inicio de la sección de contacto
+        contactFormSection.prepend(alertDiv); 
+
+        // Limpiar el parámetro de la URL después de mostrar el mensaje
+        history.replaceState(null, '', location.pathname);
+    }
+}
+// ... fin del nuevo código
+    </script>
+    
+</body>
+</html>

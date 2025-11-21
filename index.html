@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Wilches</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">Wilches</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner Principal -->
+    <header class="banner">
+        <h1>Wilches</h1>
+        <p>Diseñador Gráfico y Creativo</p>
+        <p>Transformo ideas en diseños impactantes que comunican tu mensaje de manera efectiva</p>
+        <img src="imagenes/WhatsApp Image 2025-09-10 at 11.46.35 PM (1).jpeg" alt="Wilches">
+        <div class="cta-buttons">
+            <a href="portafolio.html" class="btn-primary">Ver Portafolio</a>
+            <a href="contacto.html" class="btn-secondary">Contáctame</a>
+        </div>
+    </header>
+
+    <!-- Sección ¿Qué hago? -->
+    <section class="what-i-do">
+        <h2>¿Qué Hago?</h2>
+        <div class="services-preview">
+            <div class="service-preview-item">
+                <div class="icon">🎨</div>
+                <h3>Diseño Gráfico</h3>
+                <p>Logotipos, branding e identidad visual para tu marca</p>
+            </div>
+            <div class="service-preview-item">
+                <div class="icon">📹</div>
+                <h3>Contenido Audiovisual</h3>
+                <p>Videos y contenido visual para redes sociales</p>
+            </div>
+            <div class="service-preview-item">
+                <div class="icon">📢</div>
+                <h3>Publicidad</h3>
+                <p>Campañas publicitarias que generan impacto</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Estadísticas -->
+    <section class="stats">
+        <div class="stat-item">
+            <h3>5+</h3>
+            <p>Años de Experiencia</p>
+        </div>
+        <div class="stat-item">
+            <h3>50+</h3>
+            <p>Proyectos Completados</p>
+        </div>
+        <div class="stat-item">
+            <h3>40+</h3>
+            <p>Clientes Satisfechos</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>Dedicación</p>
+        </div>
+    </section>
+
+    <!-- Llamado a la acción -->
+    <section class="cta-section">
+        <h2>¿Listo para llevar tu marca al siguiente nivel?</h2>
+        <p>Trabajemos juntos en tu próximo proyecto</p>
+        <a href="contacto.html" class="btn-primary">Comenzar Ahora</a>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Sígueme en redes sociales:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100009296527209" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/bocadosstreet?igsh=MXdsNWY5ZTRwdXBrZQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Wilches - Diseñador Gráfico</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menú Hamburguesa
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
